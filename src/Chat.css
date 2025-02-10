@@ -1,0 +1,138 @@
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #0b141a;
+  width: 100%;
+  min-width: 0;
+}
+
+.chat-header {
+  padding: 16px;
+  background-color: #202c33;
+  color: #e9edef;
+  border-bottom: 1px solid #2f3b43;
+}
+
+.messages-container {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+  background-size: cover;
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.message {
+  position: relative;
+  padding: 8px 70px 8px 12px;
+  margin-bottom: 10px;
+  max-width: 65%;
+  min-width: 75px;
+  border-radius: 7.5px;
+  color: #e9edef;
+  font-size: 14px;
+  line-height: 19px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  min-height: 32px;
+  width: auto;
+  display: flex;
+  align-items: flex-end;
+}
+
+.message-content {
+  flex: 1;
+  padding: 0 4px 3px 0;
+  min-width: 0;
+}
+
+.message-time {
+  position: absolute;
+  right: 25px;
+  bottom: 8px;
+  font-size: 11px;
+  color: #8696a0;
+  line-height: 1;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.message.received .message-time {
+  right: 8px;
+}
+
+.message.received {
+  background-color: #202c33;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+.message.sent {
+  background-color: #005c4b;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.message.sent::after {
+  content: '✓';
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  font-size: 13px;
+  color: #8696a0;
+}
+
+.message.sent::before {
+  content: '✓';
+  position: absolute;
+  right: 12px;
+  bottom: 8px;
+  font-size: 13px;
+  color: #8696a0;
+}
+
+.message.sent.read::after,
+.message.sent.read::before {
+  color: #53bdeb;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #202c33;
+  gap: 10px;
+}
+
+.input-container input {
+  flex-grow: 1;
+  padding: 12px;
+  background-color: #2a3942;
+  border: 1px solid #374045;
+  border-radius: 8px;
+  color: #e9edef;
+  font-size: 15px;
+}
+
+.input-container input::placeholder {
+  color: #8696a0;
+}
+
+.input-container button {
+  padding: 8px 12px;
+  background-color: #00a884;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.input-container button:hover {
+  background-color: #008f72;
+} 
